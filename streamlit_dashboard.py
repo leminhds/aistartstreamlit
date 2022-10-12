@@ -107,17 +107,17 @@ try:
 
     columns_to_compare = df_to_print[df_to_print.columns.drop(countries_columns)].columns
 
-    fig, ax = plt.subplots(figsize=(5,3))
-    sns.histplot(data=df['Tracxn Score'], ax=ax)
-    if company_selected:
-        for company in company_selected:
-            plt.annotate(company,
-                            xy= (df[df['Domain'] == company]['Tracxn Score'].iloc[0], 10),
-                            # Shrink the arrow to avoid occlusion
-                            arrowprops = {'facecolor':'gray', 'width': 3, 'shrink': 0.03}, alpha=0.3)
-        st.pyplot(fig)
-        st.markdown('#')
-        st.markdown('## Founder Deep Dive')
+    # fig, ax = plt.subplots(figsize=(5,3))
+    # sns.histplot(data=df['Tracxn Score'], ax=ax)
+    # if company_selected:
+    #     for company in company_selected:
+    #         plt.annotate(company,
+    #                         xy= (df[df['Domain'] == company]['Tracxn Score'].iloc[0], 10),
+    #                         # Shrink the arrow to avoid occlusion
+    #                         arrowprops = {'facecolor':'gray', 'width': 3, 'shrink': 0.03}, alpha=0.3)
+    #     st.pyplot(fig)
+    st.markdown('#')
+    st.markdown('## Founder Deep Dive')
 
     row11_1, row11_2 = st.columns(2)
     with row11_1:
