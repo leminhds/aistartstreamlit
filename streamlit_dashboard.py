@@ -11,7 +11,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.set_page_config(layout="wide")
 
-df = pd.read_csv('streamlit_app/streamlit_input.csv')
+df = pd.read_csv('./streamlit_input.csv')
 df.dropna(subset="Domain", inplace=True)
 
 countries_columns = list()
@@ -64,7 +64,7 @@ try:
     filtered_companies = df_grouped[df_grouped[filter_selected] >=n_year_filtered]
 
 
-    with open('streamlit_app/modelRF.pkl', 'rb') as f:
+    with open('./modelRF.pkl', 'rb') as f:
         RF_model = pickle.load(f)
     X = filtered_companies.drop('Tracxn Score', axis = 1)
     y = filtered_companies['Tracxn Score']
