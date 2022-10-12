@@ -1,0 +1,11 @@
+                                                              # Visualise your pipelines
+scikit-learn~=1.0                                                              # For modelling in the data science pipeline
+
+# replace zero-shot-classifier by sentence-transformers
+sentence-transformers~=2.2.2
+setuptools==63.4.1
+
+streamlit==1.13.0
+
+seaborn==0.12.0
+pycountry==20.7.3
